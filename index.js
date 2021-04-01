@@ -8,7 +8,7 @@ let data = [
 	{id:1, title:'task 1', checked:false, button:'-', del:false},
 ]
 
-//**Card constructor**
+//**1.Card constructor**
 let cardList = []
 const cardMaking = ()=>{
 	let initialCardItem = document.createElement('div')	
@@ -26,13 +26,13 @@ const cardMaking = ()=>{
 	})
 
 
-	//**Card deleting**THIS HAVE TO BE DONE WITH FILTER METHOD**
+	//**2.Card deleting**THIS HAVE TO BE DONE WITH FILTER METHOD**
 	const deletingCardItem = ()=>{
 		cardList = [...cardList, initialCardItem]
 	const deletCardItem = cardList.map(elem=>elem.lastElementChild.addEventListener('click', ()=>{elem.style.display = 'none'}))	
 	}
 
-	//**Card Marking**THIS HAVE TO BE DONE WITH FILTER METHOD**
+	//**3.Card Marking**THIS HAVE TO BE DONE WITH FILTER METHOD**
 	const markingCardItem = ()=>{
 		cardList = [...cardList, initialCardItem]
 	const markCardItem = cardList.map(elem=>elem.firstElementChild.addEventListener('click', ()=>{elem.style.textDecoration = 'line-through'})) //**THIS HAVE TO BE DONE WITH FILTER METHOD**
@@ -46,7 +46,7 @@ const cardMaking = ()=>{
 
 
 
-//**New card adding**
+//**4.New card adding**
 let ids = 2
 inp.addEventListener('keydown', (event)=>{
 	if(event.keyCode == 13){
