@@ -1,56 +1,55 @@
-body{
-	background-color: #F1F3F4FF
+body {
+  background-color: #f1f3f4ff;
 }
-.container{
-	width: 40%;
-	min-height: 30vh;
-	margin:60px auto;
-	background-color: #FFFFFF;
-	font-family:Garamond ;
-
-}
-
-.textInput{
-	border: none;
-	outline: none;
-	border-bottom: 5px solid silver;
-	width:100%;
-	height: 50px;
-	font-size: 20px;
-	font-family:Garamond ;
+.container {
+  width: 40%;
+  min-height: 30vh;
+  margin: 60px auto;
+  background-color: #ffffff;
+  font-family: Garamond;
 }
 
-.cardItem{
-	border: 1px solid #BFBFBFFF;
-	height:30px;
-	display: flex;
-	justify-content: space-around;
-	font-size: 20px;
-	margin-top: 2px;
-	padding: 2px;
-}
-.cardItem:hover{
-	background-color:#F1F3F4FF;
-}
-.cardItem:first-child{
-	margin-top: 0;
+.textInput {
+  border: none;
+  outline: none;
+  border-bottom: 5px solid silver;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+  font-family: Garamond;
 }
 
-
-.buttn{
-	width:60px;
-	border:none;
-	border-radius: 25px;
-	color:  #BFBFBFFF;
-}
-.buttn:hover{
-	border:1px solid;
-}
-.buttn:active{
-	outline: none;
+.cardItem {
+  border: 1px solid #bfbfbfff;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-top: 2px;
+  padding: 2px;
 }
 
-.checking{
-	width:20px;
-	height:20px;
+.cardItem:hover {
+  background-color: #f1f3f4ff;
+}
+.cardItem:first-child {
+  margin-top: 0;
+}
+
+.buttn {
+  width: 60px;
+  border: none;
+  border-radius: 25px;
+  color: #bfbfbfff;
+}
+.buttn:hover {
+  border: 1px solid;
+}
+.buttn:active {
+  outline: none;
+}
+
+.checking {
+  width: 20px;
+  height: 20px;
 }

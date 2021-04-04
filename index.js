@@ -12,32 +12,48 @@ let data = [
 let cardList = []
 const cardMaking = ()=>{
 	let initialCardItem = document.createElement('div')	
+	let del = document.createElement('button')
+	let checking = document.createElement('input')
 	data.map(elem=>{
-		let del = document.createElement('button')
-		let checking = document.createElement('input')
 		checking.setAttribute("type", "checkbox");
 		cardBlock.appendChild(initialCardItem).innerHTML = elem.title
 		cardBlock.appendChild(initialCardItem).classList.add('cardItem')
 		cardBlock.appendChild(initialCardItem).setAttribute('id', elem.id)
+		initialCardItem.appendChild(del).setAttribute('id', elem.id)
 		initialCardItem.appendChild(checking).checked = elem.checked
 		initialCardItem.appendChild(checking).classList.add('checking')
 		initialCardItem.appendChild(del).classList.add('buttn')
 		initialCardItem.appendChild(del).innerHTML = elem.button
 	})
-
-
+	
+	cardList = [...cardList, initialCardItem]
 	//**2.Card deleting**THIS HAVE TO BE DONE WITH FILTER METHOD**
 	const deletingCardItem = ()=>{
-		cardList = [...cardList, initialCardItem]
-	const deletCardItem = cardList.map(elem=>elem.lastElementChild.addEventListener('click', ()=>{elem.style.display = 'none'}))	
+		del.addEventListener('click', (e)=>{
+			if(e.target.tagName === 'BUTTON'){
+				initialCardItem.remove()
+		}
+		})	
 	}
 
-	//**3.Card Marking**THIS HAVE TO BE DONE WITH FILTER METHOD**
+
+	//**3.Card Marking**
+	let i = false
 	const markingCardItem = ()=>{
-		cardList = [...cardList, initialCardItem]
-	const markCardItem = cardList.map(elem=>elem.firstElementChild.addEventListener('click', ()=>{elem.style.textDecoration = 'line-through'})) //**THIS HAVE TO BE DONE WITH FILTER METHOD**
+		checking.addEventListener('click', (e)=>{
+			if(e.target.tagName === 'INPUT'){
+				if(i == false){
+				initialCardItem.style.textDecoration = 'line-through'
+				i = true
+				}
+				else{
+					initialCardItem.style.textDecoration = 'none'
+					i = false
+				}
+		}
+		})	
 	}
-
+	
 	deletingCardItem()
 	markingCardItem()
 }
